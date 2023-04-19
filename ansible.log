@@ -2137,3 +2137,584 @@ The following NEW packages will be installed:
 2023-04-18 21:25:49,379 p=99975 u=ubuntu n=ansible | changed: [gat-20.eu.galaxy.training]
 2023-04-18 21:25:49,420 p=99975 u=ubuntu n=ansible | PLAY RECAP ***********************************************************************************************************
 2023-04-18 21:25:49,420 p=99975 u=ubuntu n=ansible | gat-20.eu.galaxy.training  : ok=182  changed=62   unreachable=0    failed=0    skipped=91   rescued=0    ignored=0   
+2023-04-19 06:38:39,463 p=171727 u=ubuntu n=ansible | [DEPRECATION WARNING]: community.general.system.make has been deprecated. You 
+are using an internal name to access the community.general.make modules. This 
+has never been supported or documented, and will stop working in 
+community.general 9.0.0. This feature will be removed from community.general in
+ version 9.0.0. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2023-04-19 06:38:39,543 p=171727 u=ubuntu n=ansible | PLAY [dbservers] ***************************************************************
+2023-04-19 06:38:39,557 p=171727 u=ubuntu n=ansible | TASK [Gathering Facts] *********************************************************
+2023-04-19 06:38:40,735 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:40,741 p=171727 u=ubuntu n=ansible | TASK [Install Dependencies] ****************************************************
+2023-04-19 06:38:41,611 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:41,627 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : include_tasks] ********************************
+2023-04-19 06:38:41,651 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.postgresql/tasks/debian.yml for gat-20.eu.galaxy.training
+2023-04-19 06:38:41,661 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : APT keyrings directory] ***********************
+2023-04-19 06:38:41,682 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:41,688 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Install pgdg package signing key (Debian/pgdg)] ***
+2023-04-19 06:38:41,710 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:41,716 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Install pgdg repository (Debian/pgdg)] ********
+2023-04-19 06:38:41,737 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:41,743 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Install PostgreSQL (Debian)] ******************
+2023-04-19 06:38:42,436 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:42,442 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Get installed version] ************************
+2023-04-19 06:38:42,701 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:42,708 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Set version fact] *****************************
+2023-04-19 06:38:42,747 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:42,754 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Install psycopg2] *****************************
+2023-04-19 06:38:43,509 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:43,516 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Set version fact] *****************************
+2023-04-19 06:38:43,538 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:43,545 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Set OS-specific variables] ********************
+2023-04-19 06:38:43,575 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:43,581 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Set pgdata fact] ******************************
+2023-04-19 06:38:43,605 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:43,611 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Set conf dir fact] ****************************
+2023-04-19 06:38:43,635 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:43,641 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : include_tasks] ********************************
+2023-04-19 06:38:43,653 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:43,660 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Create conf.d] ********************************
+2023-04-19 06:38:43,920 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:43,926 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Check for conf.d include in postgresql.conf] ***
+2023-04-19 06:38:44,184 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:44,190 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Set conf.d include in postgresql.conf] ********
+2023-04-19 06:38:44,211 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:44,217 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Include 25ansible_postgresql.conf in postgresql.conf] ***
+2023-04-19 06:38:44,391 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:44,397 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Set config options] ***************************
+2023-04-19 06:38:44,824 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:44,830 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Install pg_hba.conf] **************************
+2023-04-19 06:38:45,173 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:45,178 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : include_tasks] ********************************
+2023-04-19 06:38:45,208 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.postgresql/tasks/backup.yml for gat-20.eu.galaxy.training
+2023-04-19 06:38:45,219 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Create backup directories] ********************
+2023-04-19 06:38:45,403 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/var/lib/postgresql/backups)
+2023-04-19 06:38:45,547 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/var/lib/postgresql/backups/bin)
+2023-04-19 06:38:45,555 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Create backup output directory] ***************
+2023-04-19 06:38:45,722 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:45,728 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Install backup script templates] **************
+2023-04-19 06:38:46,044 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=archive_wal.sh)
+2023-04-19 06:38:46,053 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Install backup script files] ******************
+2023-04-19 06:38:46,376 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=backup.py)
+2023-04-19 06:38:46,384 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Set WAL archive config options] ***************
+2023-04-19 06:38:46,720 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:46,727 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Schedule backups] *****************************
+2023-04-19 06:38:47,036 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:47,042 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Remove PostgreSQL working WAL backup cron job] ***
+2023-04-19 06:38:47,199 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:47,205 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql : Ensure PostgreSQL is running] *****************
+2023-04-19 06:38:47,709 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:47,721 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql_objects : Warn if deprecated user priv param is set] ***
+2023-04-19 06:38:47,743 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training] => (item=galaxy) 
+2023-04-19 06:38:47,745 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:47,752 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql_objects : Revoke extra privileges] **************
+2023-04-19 06:38:47,762 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:47,768 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql_objects : Drop databases] ***********************
+2023-04-19 06:38:47,802 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training] => (item={'name': 'galaxy', 'owner': 'galaxy'}) 
+2023-04-19 06:38:47,804 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:47,810 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql_objects : Create and drop users] ****************
+2023-04-19 06:38:48,165 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy)
+2023-04-19 06:38:48,173 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql_objects : Create groups] ************************
+2023-04-19 06:38:48,184 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:48,190 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql_objects : Add or remove users from groups] ******
+2023-04-19 06:38:48,211 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:48,217 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql_objects : Drop groups] **************************
+2023-04-19 06:38:48,228 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:48,233 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql_objects : Create databases] *********************
+2023-04-19 06:38:48,638 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy)
+2023-04-19 06:38:48,646 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.postgresql_objects : Grant extra privileges] ***************
+2023-04-19 06:38:48,657 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:48,724 p=171727 u=ubuntu n=ansible | PLAY [galaxyservers] ***********************************************************
+2023-04-19 06:38:48,769 p=171727 u=ubuntu n=ansible | TASK [Gathering Facts] *********************************************************
+2023-04-19 06:38:49,542 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:49,559 p=171727 u=ubuntu n=ansible | TASK [Install Dependencies] ****************************************************
+2023-04-19 06:38:50,268 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:50,288 p=171727 u=ubuntu n=ansible | TASK [Install RHEL/CentOS/Rocky specific dependencies] *************************
+2023-04-19 06:38:50,301 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:50,329 p=171727 u=ubuntu n=ansible | TASK [Install Debian/Ubuntu specific dependencies] *****************************
+2023-04-19 06:38:51,028 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:51,080 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Fetch latest tusd release information] **************
+2023-04-19 06:38:51,662 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:51,681 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Set latest tusd release number] *********************
+2023-04-19 06:38:51,700 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:51,720 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Check for tusd existence] ***************************
+2023-04-19 06:38:51,936 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:51,957 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Get current tusd version] ***************************
+2023-04-19 06:38:52,138 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:52,156 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Set current tusd version fact] **********************
+2023-04-19 06:38:52,206 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:52,225 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Report why tusd is being installed] *****************
+2023-04-19 06:38:52,238 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:52,257 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Create tempdir for unarchive] ***********************
+2023-04-19 06:38:52,271 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:52,291 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Extract tusd binary] ********************************
+2023-04-19 06:38:52,306 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:52,329 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Install tusd binary] ********************************
+2023-04-19 06:38:52,349 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:52,370 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Clean tempdir] **************************************
+2023-04-19 06:38:52,385 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:52,403 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Include systemd tasks] ******************************
+2023-04-19 06:38:52,436 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.tusd/tasks/systemd.yml for gat-20.eu.galaxy.training
+2023-04-19 06:38:52,469 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Install tusd service unit] **************************
+2023-04-19 06:38:52,481 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:52,501 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Flush handlers] *************************************
+2023-04-19 06:38:52,535 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.tusd : Ensure configured tusd instances are enabled and running] ***
+2023-04-19 06:38:52,546 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:52,581 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.apptainer : Add apptainer ppa (Ubuntu)] *********************
+2023-04-19 06:38:52,973 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:52,991 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.apptainer : Install apptainer] ******************************
+2023-04-19 06:38:53,736 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:53,772 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Ensure that mutually exclusive options are not set] ***
+2023-04-19 06:38:53,789 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => changed=false 
+  msg: All assertions passed
+2023-04-19 06:38:53,807 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Set privilege separation default variables] *******
+2023-04-19 06:38:53,849 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:53,868 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include layout vars] ******************************
+2023-04-19 06:38:53,901 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:53,920 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Set any unset variables from layout defaults] *****
+2023-04-19 06:38:53,956 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy_venv_dir)
+2023-04-19 06:38:53,970 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy_server_dir)
+2023-04-19 06:38:53,980 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy_config_dir)
+2023-04-19 06:38:53,984 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy_mutable_data_dir)
+2023-04-19 06:38:53,988 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy_mutable_config_dir)
+2023-04-19 06:38:53,995 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy_shed_tools_dir)
+2023-04-19 06:38:54,002 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy_cache_dir)
+2023-04-19 06:38:54,005 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy_local_tools_dir)
+2023-04-19 06:38:54,009 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy_tool_data_path)
+2023-04-19 06:38:54,029 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Check that any explicitly set Galaxy config options match the values of explicitly set variables] ***
+2023-04-19 06:38:54,091 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training] => (item=tool_dependency_dir) 
+2023-04-19 06:38:54,121 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training] => (item=file_path) 
+2023-04-19 06:38:54,152 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training] => (item=job_working_directory) 
+2023-04-19 06:38:54,179 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training] => (item=shed_tool_config_file) 
+2023-04-19 06:38:54,181 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:54,200 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Set any unset variables corresponding to Galaxy config options from galaxy_config or layout defaults] ***
+2023-04-19 06:38:54,281 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=tool_dependency_dir)
+2023-04-19 06:38:54,316 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=file_path)
+2023-04-19 06:38:54,360 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=job_working_directory)
+2023-04-19 06:38:54,385 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include user creation tasks] **********************
+2023-04-19 06:38:54,436 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.galaxy/tasks/user.yml for gat-20.eu.galaxy.training
+2023-04-19 06:38:54,472 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create Galaxy group] ******************************
+2023-04-19 06:38:54,572 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:54,590 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create Galaxy user] *******************************
+2023-04-19 06:38:55,154 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:55,173 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create Galaxy privilege separation user] **********
+2023-04-19 06:38:55,282 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:55,301 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Get group IDs for Galaxy users] *******************
+2023-04-19 06:38:55,623 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy)
+2023-04-19 06:38:55,773 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=root)
+2023-04-19 06:38:55,795 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Get group names for Galaxy users] *****************
+2023-04-19 06:38:55,970 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy)
+2023-04-19 06:38:56,118 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=root)
+2023-04-19 06:38:56,139 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Set Galaxy user facts] ****************************
+2023-04-19 06:38:56,219 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:56,237 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Determine whether to restrict to group permissions] ***
+2023-04-19 06:38:56,255 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:56,273 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include path management tasks] ********************
+2023-04-19 06:38:56,306 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.galaxy/tasks/paths.yml for gat-20.eu.galaxy.training
+2023-04-19 06:38:56,343 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create galaxy_root] *******************************
+2023-04-19 06:38:56,675 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:38:56,693 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create additional privilege separated directories] ***
+2023-04-19 06:38:57,031 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/venv)
+2023-04-19 06:38:57,326 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/server)
+2023-04-19 06:38:57,640 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/config)
+2023-04-19 06:38:57,958 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/local_tools)
+2023-04-19 06:38:57,981 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create additional directories] ********************
+2023-04-19 06:38:58,311 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/var)
+2023-04-19 06:38:58,618 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/var/config)
+2023-04-19 06:38:58,934 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/var/cache)
+2023-04-19 06:38:59,235 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/var/shed_tools)
+2023-04-19 06:38:59,541 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/var/dependencies)
+2023-04-19 06:38:59,833 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/data/datasets)
+2023-04-19 06:39:00,127 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/data/jobs)
+2023-04-19 06:39:00,434 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/var/tool_data)
+2023-04-19 06:39:00,735 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/var/log)
+2023-04-19 06:39:01,029 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/data)
+2023-04-19 06:39:01,050 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include clone tasks] ******************************
+2023-04-19 06:39:01,111 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.galaxy/tasks/clone.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:01,150 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Update Galaxy to specified ref] *******************
+2023-04-19 06:39:02,546 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:02,564 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Report Galaxy version change] *********************
+2023-04-19 06:39:02,660 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:02,678 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create Galaxy virtualenv] *************************
+2023-04-19 06:39:04,369 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:04,388 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Ensure pip is the desired release] ****************
+2023-04-19 06:39:06,088 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:06,107 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Remove orphaned .pyc files and compile bytecode] ***
+2023-04-19 06:39:06,205 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:06,223 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include download tasks] ***************************
+2023-04-19 06:39:06,236 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:06,254 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include manage existing galaxy tasks] *************
+2023-04-19 06:39:06,266 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:06,284 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include static config setup tasks] ****************
+2023-04-19 06:39:06,337 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.galaxy/tasks/static_setup.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:06,383 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Ensure Galaxy version is set] *********************
+2023-04-19 06:39:06,505 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.galaxy/tasks/_inc_galaxy_version.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:06,546 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Collect Galaxy version file] **********************
+2023-04-19 06:39:06,957 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:06,975 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Determine Galaxy version] *************************
+2023-04-19 06:39:07,174 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:07,192 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install additional Galaxy config files (static)] ***
+2023-04-19 06:39:07,668 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item={'src': 'files/galaxy/themes.yml', 'dest': '/srv/galaxy/config/themes.yml'})
+2023-04-19 06:39:07,688 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install additional Galaxy config files (static, public)] ***
+2023-04-19 06:39:08,155 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item={'src': 'files/galaxy/welcome.html', 'dest': '/srv/galaxy/var/config/welcome.html'})
+2023-04-19 06:39:08,175 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install additional Galaxy config files (template)] ***
+2023-04-19 06:39:08,673 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item={'src': 'templates/galaxy/config/container_resolvers_conf.yml.j2', 'dest': '/srv/galaxy/config/container_resolvers_conf.yml'})
+2023-04-19 06:39:09,119 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item={'src': 'templates/galaxy/config/dependency_resolvers_conf.xml', 'dest': '/srv/galaxy/config/dependency_resolvers_conf.xml'})
+2023-04-19 06:39:09,140 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install local tools] ******************************
+2023-04-19 06:39:09,168 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:09,186 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install local_tool_conf.xml] **********************
+2023-04-19 06:39:09,285 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:09,303 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Append local_tool_conf.xml to tool_config_file Galaxy config option] ***
+2023-04-19 06:39:09,405 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:09,424 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Append shed_tool_conf.xml to tool_config_file Galaxy config option] ***
+2023-04-19 06:39:09,522 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:09,542 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Ensure dynamic job rules paths exists] ************
+2023-04-19 06:39:09,557 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:09,576 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install dynamic job rules (static)] ***************
+2023-04-19 06:39:09,590 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:09,609 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install dynamic job rules (template)] *************
+2023-04-19 06:39:09,622 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:09,640 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Ensure dynamic rule __init__.py's exist] **********
+2023-04-19 06:39:09,653 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:09,673 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create Galaxy job metrics configuration file] *****
+2023-04-19 06:39:09,772 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:09,790 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create Galaxy dependency resolvers configuration file] ***
+2023-04-19 06:39:09,891 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:09,910 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create Galaxy container resolvers configuration file] ***
+2023-04-19 06:39:10,008 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:10,027 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create Galaxy configuration file] *****************
+2023-04-19 06:39:10,604 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:10,622 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include dependency setup tasks] *******************
+2023-04-19 06:39:10,673 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.galaxy/tasks/dependencies.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:10,720 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create Galaxy virtualenv] *************************
+2023-04-19 06:39:12,297 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:12,316 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Ensure pip is the desired release] ****************
+2023-04-19 06:39:14,007 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:14,026 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install Galaxy base dependencies] *****************
+2023-04-19 06:39:18,920 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:18,939 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Collect Galaxy conditional dependency requirement strings] ***
+2023-04-19 06:39:19,506 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:19,525 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install Galaxy conditional dependencies] **********
+2023-04-19 06:39:21,106 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:21,127 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install additional packages into galaxy's virtual environment] ***
+2023-04-19 06:39:21,225 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:21,243 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include mutable config setup tasks] ***************
+2023-04-19 06:39:21,291 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.galaxy/tasks/mutable_setup.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:21,343 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Ensure Galaxy version is set] *********************
+2023-04-19 06:39:21,440 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:21,459 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Create directories for config files] **************
+2023-04-19 06:39:21,957 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/srv/galaxy/var/config)
+2023-04-19 06:39:21,976 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Instantiate mutable configuration files] **********
+2023-04-19 06:39:22,405 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item={'src': 'shed_data_manager_conf.xml', 'dest': '/srv/galaxy/var/config/shed_data_manager_conf.xml'})
+2023-04-19 06:39:22,704 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item={'src': 'shed_tool_data_table_conf.xml', 'dest': '/srv/galaxy/var/config/shed_tool_data_table_conf.xml'})
+2023-04-19 06:39:22,726 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Instantiate mutable configuration templates] ******
+2023-04-19 06:39:23,108 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item={'src': 'shed_tool_conf.xml.j2', 'dest': '/srv/galaxy/var/config/migrated_tools_conf.xml'})
+2023-04-19 06:39:23,408 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item={'src': 'shed_tool_conf.xml.j2', 'dest': '/srv/galaxy/var/config/shed_tool_conf.xml'})
+2023-04-19 06:39:23,429 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include database management tasks] ****************
+2023-04-19 06:39:23,464 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.galaxy/tasks/database.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:23,516 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Get current Galaxy DB version] ********************
+2023-04-19 06:39:24,898 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:24,917 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Get maximum Galaxy DB version] ********************
+2023-04-19 06:39:26,195 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:26,214 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Report current and max Galaxy database] ***********
+2023-04-19 06:39:26,314 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:26,333 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Upgrade Galaxy DB] ********************************
+2023-04-19 06:39:26,430 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:26,449 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include client build tasks] ***********************
+2023-04-19 06:39:26,517 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.galaxy/tasks/client.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:26,575 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Ensure client_build_hash.txt exists] **************
+2023-04-19 06:39:26,912 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:26,931 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Get current client commit id] *********************
+2023-04-19 06:39:27,252 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:27,271 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Check if Galaxy was checked out from git] *********
+2023-04-19 06:39:27,606 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:27,625 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Get current Galaxy commit id] *********************
+2023-04-19 06:39:27,977 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:27,996 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Set client build version fact] ********************
+2023-04-19 06:39:28,173 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:28,192 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Set client build version fact] ********************
+2023-04-19 06:39:28,367 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:28,385 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Report client version mismatch] *******************
+2023-04-19 06:39:28,483 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:28,502 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Ensure galaxy_node_version is set] ****************
+2023-04-19 06:39:28,601 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:28,620 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Check if node is installed] ***********************
+2023-04-19 06:39:28,722 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:28,740 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Collect installed node version] *******************
+2023-04-19 06:39:28,841 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:28,860 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Remove node_modules directory when upgrading node] ***
+2023-04-19 06:39:28,963 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:28,982 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install or upgrade node] **************************
+2023-04-19 06:39:29,085 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:29,104 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Install yarn] *************************************
+2023-04-19 06:39:29,207 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:29,227 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include client build process] *********************
+2023-04-19 06:39:29,325 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:29,344 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include error document setup tasks] ***************
+2023-04-19 06:39:29,358 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:29,376 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include Gravity setup tasks] **********************
+2023-04-19 06:39:29,414 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.galaxy/tasks/gravity.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:29,485 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Register Galaxy config with Gravity (Gravity < 1)] ***
+2023-04-19 06:39:29,586 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:29,607 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Deploy galaxyctl wrapper script] ******************
+2023-04-19 06:39:30,214 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:30,234 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include systemd unit setup tasks (Galaxy)] ********
+2023-04-19 06:39:30,251 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:30,270 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include systemd unit setup tasks (Reports)] *******
+2023-04-19 06:39:30,282 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:30,303 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Include cleanup scheduling tasks] *****************
+2023-04-19 06:39:30,336 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.galaxy/tasks/cleanup.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:30,395 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Schedule tmpclean cron job (root)] ****************
+2023-04-19 06:39:30,789 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:30,814 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.galaxy : Schedule tmpclean cron job (user)] ****************
+2023-04-19 06:39:30,925 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:30,960 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.miniconda : Check for miniconda existence] *****************
+2023-04-19 06:39:31,121 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:31,139 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.miniconda : Include install tasks] *************************
+2023-04-19 06:39:31,154 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:31,172 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.miniconda : Collect miniconda version] *********************
+2023-04-19 06:39:31,525 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:31,543 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.miniconda : Update miniconda version (exact)] **************
+2023-04-19 06:39:31,576 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:31,594 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.miniconda : Update miniconda version (latest)] *************
+2023-04-19 06:39:31,609 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:31,627 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.miniconda : Install packages to conda base environment] ****
+2023-04-19 06:39:31,640 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:31,661 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.miniconda : Create conda envs] *****************************
+2023-04-19 06:39:31,684 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:31,703 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.miniconda : Update conda envs] *****************************
+2023-04-19 06:39:31,725 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:31,743 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.miniconda : Create Galaxy conda env] ***********************
+2023-04-19 06:39:31,757 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:31,795 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : include_tasks] *************************************
+2023-04-19 06:39:31,833 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.nginx/tasks/apt.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:31,863 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Install nginx (APT)] *******************************
+2023-04-19 06:39:32,568 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:32,588 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Disable default vhost] *****************************
+2023-04-19 06:39:32,758 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:32,777 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : include_tasks] *************************************
+2023-04-19 06:39:32,790 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:32,808 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : include_tasks] *************************************
+2023-04-19 06:39:32,822 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:32,841 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Collect nginx -V output] ***************************
+2023-04-19 06:39:32,996 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:33,015 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Make nginx -V output a single line] ****************
+2023-04-19 06:39:33,042 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:33,060 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Register nginx-reported facts] *********************
+2023-04-19 06:39:33,088 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:33,109 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Register fake news nginx facts] ********************
+2023-04-19 06:39:33,122 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:33,141 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Admit to fake news nginx facts] ********************
+2023-04-19 06:39:33,154 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:33,172 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : include_tasks] *************************************
+2023-04-19 06:39:33,185 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:33,204 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Create supervisor config] **************************
+2023-04-19 06:39:33,227 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:33,246 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Set additional config options] *********************
+2023-04-19 06:39:33,568 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:33,586 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Copy additional configs] ***************************
+2023-04-19 06:39:33,615 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:33,634 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Install vhost configs] *****************************
+2023-04-19 06:39:33,970 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=redirect-ssl)
+2023-04-19 06:39:33,991 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Enable vhosts] *************************************
+2023-04-19 06:39:34,178 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=redirect-ssl)
+2023-04-19 06:39:34,198 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Check non-SSL nginx config] ************************
+2023-04-19 06:39:34,612 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:34,630 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Include SSL configuration tasks] *******************
+2023-04-19 06:39:34,709 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.nginx/tasks/ssl-external.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:34,745 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Flush handlers before running SSL role] ************
+2023-04-19 06:39:34,778 p=171727 u=ubuntu n=ansible | TASK [Include SSL role] ********************************************************
+2023-04-19 06:39:34,969 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Include virtualenv installation tasks] ************
+2023-04-19 06:39:35,005 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/usegalaxy_eu.certbot/tasks/install-with-venv.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:35,038 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Install certbot into virtualenv] ******************
+2023-04-19 06:39:35,820 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:35,839 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Install certbot DNS provider] *********************
+2023-04-19 06:39:35,860 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:35,878 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Set Certbot script variable.] *********************
+2023-04-19 06:39:35,895 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:35,914 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Include source installation tasks] ****************
+2023-04-19 06:39:35,927 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:35,945 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Include package installation tasks] ***************
+2023-04-19 06:39:35,958 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:35,977 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Include cert request tasks] ***********************
+2023-04-19 06:39:36,013 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/usegalaxy_eu.certbot/tasks/request-cert.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:36,073 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Create webroot directories] ***********************
+2023-04-19 06:39:36,253 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:36,271 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Create DNS provider credential directory] *********
+2023-04-19 06:39:36,293 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:36,311 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Create DNS provider credentials] ******************
+2023-04-19 06:39:36,333 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:36,352 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Request certificate] ******************************
+2023-04-19 06:39:36,552 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:36,572 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Log output of certbot command] ********************
+2023-04-19 06:39:36,594 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => 
+  request:
+    changed: false
+    cmd:
+    - /opt/certbot/bin/certbot
+    - certonly
+    - --test-cert
+    - --non-interactive
+    - --webroot
+    - --register-unsafely-without-email
+    - --agree-tos
+    - -w
+    - /srv/nginx/_well-known_root
+    - -d
+    - gat-20.eu.galaxy.training
+    delta: null
+    end: null
+    failed: false
+    msg: Did not run command since '/etc/letsencrypt/renewal/gat-20.eu.galaxy.training.conf' exists
+    rc: 0
+    start: null
+    stderr: ''
+    stderr_lines: []
+    stdout: skipped, since /etc/letsencrypt/renewal/gat-20.eu.galaxy.training.conf exists
+    stdout_lines:
+    - skipped, since /etc/letsencrypt/renewal/gat-20.eu.galaxy.training.conf exists
+2023-04-19 06:39:36,613 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Include post-renewal script setup tasks] **********
+2023-04-19 06:39:36,655 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/usegalaxy_eu.certbot/tasks/post-renewal.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:36,697 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Create the ssl-cert group if it doesn't exist] ****
+2023-04-19 06:39:36,715 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:36,735 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Write the certificate post-renewal hook script] ***
+2023-04-19 06:39:37,091 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:37,110 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Flush handlers] ***********************************
+2023-04-19 06:39:37,144 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Include cron setup tasks] *************************
+2023-04-19 06:39:37,178 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/usegalaxy_eu.certbot/tasks/renew-cron.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:37,219 p=171727 u=ubuntu n=ansible | TASK [usegalaxy_eu.certbot : Add cron job for certbot renewal (if configured).] ***
+2023-04-19 06:39:37,399 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:37,435 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Disable ssl_prefer_server_ciphers in nginx.conf if set] ***
+2023-04-19 06:39:37,591 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:37,609 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Configure server-wide SSL] *************************
+2023-04-19 06:39:37,958 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:37,977 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Ensure nginx SSL directory exists] *****************
+2023-04-19 06:39:38,143 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:38,163 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Generate strong Diffie-Hellman group] **************
+2023-04-19 06:39:38,317 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:38,337 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Include SSL server (vhost) tasks] ******************
+2023-04-19 06:39:38,374 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.nginx/tasks/ssl-server.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:38,408 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Install SSL vhost configs] *************************
+2023-04-19 06:39:39,109 p=171727 u=ubuntu n=ansible | [0;31m--- before: /etc/nginx/sites-available/galaxy[0m
+[0;31m[0m[0;32m+++ after: /home/ubuntu/.ansible/tmp/ansible-local-171727w2nzu3wo/tmpkhcr35lb/galaxy.j2[0m
+[0;32m[0m[0;36m@@ -26,7 +26,7 @@[0m
+[0;36m[0m 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+ 		proxy_set_header X-Forwarded-Proto $scheme;
+ 		proxy_set_header Upgrade $http_upgrade;
+[0;31m-   [0m
+[0;31m[0m[0;32m+	}   [0m
+[0;32m[0m 	location /api/upload/resumable_upload {
+ 		# Disable request and response buffering
+ 		proxy_request_buffering     off;
+[0;36m@@ -41,7 +41,6 @@[0m
+[0;36m[0m 		proxy_set_header Connection         "upgrade";
+ 		client_max_body_size        0;
+ 		proxy_pass http://localhost:1080/files;
+[0;31m-	}[0m
+[0;31m[0m 	}
+ 
+ 	# Static files can be more efficiently served by Nginx. Why send the
+
+
+2023-04-19 06:39:39,111 p=171727 u=ubuntu n=ansible | changed: [gat-20.eu.galaxy.training] => (item=galaxy)
+2023-04-19 06:39:39,131 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Enable SSL vhosts] *********************************
+2023-04-19 06:39:39,316 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=galaxy)
+2023-04-19 06:39:39,336 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Check SSL nginx config] ****************************
+2023-04-19 06:39:39,507 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:39,525 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Enable nginx (supervisor)] *************************
+2023-04-19 06:39:39,542 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:39,560 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.nginx : Enable nginx (service)] ****************************
+2023-04-19 06:39:39,840 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:39,875 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.gxadmin : Clone gxadmin repository] ************************
+2023-04-19 06:39:40,496 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:40,515 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.gxadmin : Check if executable exists] **********************
+2023-04-19 06:39:40,675 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:40,693 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.gxadmin : Compile gxadmin when there are updates] **********
+2023-04-19 06:39:40,707 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:40,725 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.gxadmin : Create bin directory] ****************************
+2023-04-19 06:39:40,885 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:40,907 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.gxadmin : Add gxadmin to bin dir] **************************
+2023-04-19 06:39:41,080 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:41,098 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.gxadmin : Create config directory] *************************
+2023-04-19 06:39:41,256 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:41,276 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.gxadmin : Copy local file if the destination does not exist.] ***
+2023-04-19 06:39:41,440 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:41,458 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.gxadmin : Insert configuration using a local file] *********
+2023-04-19 06:39:41,713 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:41,748 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Set OS-specific variables] *************************
+2023-04-19 06:39:41,785 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:41,803 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Set facts for Galaxy CVMFS config repository, if enabled] ***
+2023-04-19 06:39:41,838 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:41,857 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Set facts for Galaxy CVMFS static repositories, if enabled] ***
+2023-04-19 06:39:41,869 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:41,887 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Set facts for CVMFS config repository, if enabled] ***
+2023-04-19 06:39:41,924 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:41,942 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Include Client Tasks] ******************************
+2023-04-19 06:39:42,022 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.cvmfs/tasks/client.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:42,082 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Include initial OS-specific tasks] *****************
+2023-04-19 06:39:42,138 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.cvmfs/tasks/init_debian.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:42,170 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Install apt dependencies] **************************
+2023-04-19 06:39:42,875 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:42,894 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Install CernVM apt key] ****************************
+2023-04-19 06:39:43,513 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:43,532 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Configure CernVM apt repository] *******************
+2023-04-19 06:39:43,546 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:43,565 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Configure CernVM apt repository] *******************
+2023-04-19 06:39:43,856 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:43,874 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Configure CernVM apt repository] *******************
+2023-04-19 06:39:43,889 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:43,908 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Install CernVM-FS packages and dependencies (apt)] ***
+2023-04-19 06:39:44,651 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:44,669 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Include key setup tasks] ***************************
+2023-04-19 06:39:44,700 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.cvmfs/tasks/keys.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:44,735 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Make CernVM-FS key directories] ********************
+2023-04-19 06:39:44,929 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/etc/cvmfs/keys/galaxyproject.org)
+2023-04-19 06:39:44,951 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Install CernVM-FS keys] ****************************
+2023-04-19 06:39:45,290 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training] => (item=/etc/cvmfs/keys/galaxyproject.org/cvmfs-config.galaxyproject.org.pub)
+2023-04-19 06:39:45,313 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Check CernVM-FS for setup] *************************
+2023-04-19 06:39:45,545 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:45,564 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Ensure AutoFS is enabled + running] ****************
+2023-04-19 06:39:45,834 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:45,853 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Perform AutoFS and FUSE configuration for CernVM-FS] ***
+2023-04-19 06:39:45,867 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:45,886 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Create config repo config] *************************
+2023-04-19 06:39:46,213 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:46,232 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Set config repo defaults] **************************
+2023-04-19 06:39:46,549 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:46,568 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Remove domain configuration] ***********************
+2023-04-19 06:39:46,741 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:46,760 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Configure CernVM-FS domain] ************************
+2023-04-19 06:39:46,773 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:46,791 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Configure CernVM-FS global client settings] ********
+2023-04-19 06:39:47,113 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:47,131 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Include repository client options tasks] ***********
+2023-04-19 06:39:47,163 p=171727 u=ubuntu n=ansible | included: /home/ubuntu/galaxy/roles/galaxyproject.cvmfs/tasks/options.yml for gat-20.eu.galaxy.training
+2023-04-19 06:39:47,195 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Ensure per-repository directories exist for repositories with options defined for client] ***
+2023-04-19 06:39:47,208 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:47,227 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Set repository options for client] *****************
+2023-04-19 06:39:47,250 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:47,269 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Install cvmfs_wipecache setuid binary] *************
+2023-04-19 06:39:47,293 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:47,312 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Remove cvmfs_wipecache setuid binary] **************
+2023-04-19 06:39:47,483 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:47,501 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Install cvmfs_remount_sync setuid binary] **********
+2023-04-19 06:39:47,525 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:47,543 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Remove cvmfs_remount_sync setuid binary] ***********
+2023-04-19 06:39:47,713 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:47,732 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Download cvmfs_preload utility when desired] *******
+2023-04-19 06:39:47,755 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:47,773 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Include Stratum1 Tasks] ****************************
+2023-04-19 06:39:47,786 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:47,805 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Include Stratum0 Tasks] ****************************
+2023-04-19 06:39:47,818 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:47,837 p=171727 u=ubuntu n=ansible | TASK [galaxyproject.cvmfs : Include localproxy Tasks] **************************
+2023-04-19 06:39:47,850 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:47,919 p=171727 u=ubuntu n=ansible | RUNNING HANDLER [galaxyproject.nginx : reload nginx] ***************************
+2023-04-19 06:39:48,220 p=171727 u=ubuntu n=ansible | changed: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:48,238 p=171727 u=ubuntu n=ansible | RUNNING HANDLER [galaxyproject.nginx : supervisorctl reload nginx] *************
+2023-04-19 06:39:48,255 p=171727 u=ubuntu n=ansible | skipping: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:48,274 p=171727 u=ubuntu n=ansible | TASK [Setup gxadmin cleanup task] **********************************************
+2023-04-19 06:39:48,457 p=171727 u=ubuntu n=ansible | ok: [gat-20.eu.galaxy.training]
+2023-04-19 06:39:48,493 p=171727 u=ubuntu n=ansible | PLAY RECAP *********************************************************************
+2023-04-19 06:39:48,493 p=171727 u=ubuntu n=ansible | gat-20.eu.galaxy.training  : ok=151  changed=2    unreachable=0    failed=0    skipped=92   rescued=0    ignored=0   
