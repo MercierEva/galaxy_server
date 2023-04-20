@@ -1,0 +1,6 @@
+- hosts: monitoring
+  become: true
+  vars: 
+    influxdb_install_method: "does-not-exist"
+  roles:
+    - usegalaxy_eu.influxdb
