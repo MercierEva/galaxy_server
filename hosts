@@ -5,5 +5,7 @@ galaxyservers
 [pulsarservers]
 gat-20.oz.galaxy.training
 [monitoring]
-gat-20.eu.training.galaxyproject.eu ansible_connection=local ansible_user=ubuntu
+gat-20.oz.galaxy.training ansible_connection=local ansible_user=ubuntu
+[sentryservers]
+gat-20.eu.galaxy.training ansible_connection=local ansible_user=ubuntu
   

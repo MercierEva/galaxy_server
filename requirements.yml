@@ -44,4 +44,15 @@
   version: 1.0.2
 - src: usegalaxy_eu.influxdb
   version: v6.0.7
- 
+- src: cloudalchemy.grafana
+  version: 0.14.2
+# Monitoring
+- name: dj-wasabi.telegraf
+  src: https://github.com/dj-wasabi/ansible-telegraf
+  version: 6f6fdf7f5ead491560783d52528b79e9e088bd5b
+# Training Infrastructure as a Service
+- src: galaxyproject.tiaas2
+  version: 2.1.5
+# Sentry
+- name: mvdbeek.sentry_selfhosted
+  src: https://github.com/mvdbeek/ansible-role-sentry/archive/main.tar.gz
